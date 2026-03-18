@@ -1,0 +1,158 @@
+/* ===== HEADER AREA ===== */
+.header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-shrink: 0;
+}
+
+h1 { 
+    margin: 0; 
+    font-size: 28px; 
+    font-weight: 800; 
+    color: #1e293b; 
+    letter-spacing: -0.5px; 
+}
+
+.controls-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+/* Common height for all header controls */
+.back-button, .search-box input, .filter-select, .header-btn { 
+    height: 45px; 
+}
+
+/* SEARCH BOX */
+.search-box { 
+    position: relative; 
+    width: 100%; 
+    max-width: 450px; 
+}
+
+.search-box input {
+    width: 100%; 
+    padding: 0 35px 0 40px; 
+    border-radius: 8px; 
+    border: 1px solid #cbd5e1;
+    font-size: 15px; 
+    outline: none; 
+    background: white; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.search-box input:focus { 
+    border-color: var(--primary); 
+    box-shadow: 0 0 0 3px rgba(79, 82, 189, 0.15), 0 10px 15px -3px rgba(0,0,0,0.1); 
+}
+
+.search-icon { 
+    position: absolute; 
+    left: 12px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    color: #94a3b8; 
+    pointer-events: none; 
+}
+
+.search-clear { 
+    position: absolute; 
+    right: 12px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    color: #94a3b8; 
+    cursor: pointer; 
+    font-size: 18px; 
+    display: none; /* Hidden by default */
+    width: 24px; 
+    height: 24px; 
+    line-height: 22px; 
+    text-align: center; 
+    border-radius: 50%; 
+    transition: all 0.2s;
+}
+
+.search-clear:hover { 
+    background: #f1f5f9; 
+    color: #64748b; 
+}
+
+/* BUTTONS */
+.header-btn {
+    padding: 0 20px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    background: white;
+    color: #475569;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.header-btn:hover {
+    background-color: #f8fafc;
+    border-color: var(--primary);
+    color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(79, 82, 189, 0.15);
+}
+
+.back-button {
+    display: none; /* Hidden by default */
+    align-items: center; 
+    justify-content: center; 
+    width: 45px; 
+    background: white;
+    border: 1px solid #cbd5e1; 
+    border-radius: 8px; 
+    color: var(--primary); 
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.back-button:hover { 
+    background: var(--primary-light); 
+    border-color: var(--primary); 
+}
+
+.back-button svg { 
+    width: 20px; 
+    height: 20px; 
+}
+
+/* FILTER DROPDOWN CONTAINER */
+#filterContainer { 
+    display: none; /* FIXED: This hides the dropdown in Browse mode */
+} 
+
+.filter-select {
+    padding: 0 40px 0 20px; 
+    border-radius: 8px; 
+    border: 1px solid #cbd5e1; 
+    font-size: 14px;
+    color: #475569; 
+    background-color: white; 
+    outline: none; 
+    cursor: pointer; 
+    min-width: 170px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); 
+    appearance: none; 
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2394a3b8' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; 
+    background-position: right 15px center; 
+    background-size: 10px; 
+    transition: border-color 0.2s;
+}
+
+.filter-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(79, 82, 189, 0.15);
+}

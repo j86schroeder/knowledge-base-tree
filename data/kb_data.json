@@ -1,0 +1,5112 @@
+{
+  "articles": [
+    {
+      "id": "KB4109101",
+      "process": "Systems & Configuration",
+      "domain": "Legacy Systems",
+      "tech": "NetWare 6.5",
+      "type": "How To",
+      "title": "Install NetWare 6.5 SP8",
+      "fields": {
+        "intro": "Procedure for deploying NetWare 6.5 Support Pack 8 on bare metal.",
+        "instr": "1. Insert Overlay CD 1.\n2. Boot and select 'Install new server'.\n3. Create DOS partition (500MB recommended).\n4. Select 'Custom Installation' to choose Pattern files.\n5. Post-install: Apply NICI and eDirectory patches."
+      }
+    },
+    {
+      "id": "KB4109102",
+      "process": "Systems & Configuration",
+      "domain": "Legacy Systems",
+      "tech": "Novell GroupWise",
+      "type": "How To",
+      "title": "Configure GroupWise 8 Post Office",
+      "fields": {
+        "intro": "Setting up a Post Office Agent (POA) for GroupWise 8.",
+        "instr": "1. Launch ConsoleOne with GroupWise snap-ins.\n2. Right-click Domain > New > Post Office.\n3. Define the UNC path to the PO directory.\n4. Modify startup file (grpwise.ncf) to load the POA.\n5. Ensure Port 1677 is open."
+      }
+    },
+    {
+      "id": "KB4109103",
+      "process": "Systems & Configuration",
+      "domain": "Legacy Systems",
+      "tech": "Novell ZENworks",
+      "type": "How To",
+      "title": "Deploy ZENworks 7 Desktop Agent",
+      "fields": {
+        "intro": "Rolling out the ZfD Agent to Windows XP/7 clients via Login Script.",
+        "instr": "1. Copy agent MSI to SYS:\\PUBLIC\\ZENWORKS.\n2. Edit Container Login Script.\n3. Add command: @%PROP:SYS%\\PUBLIC\\ZENWORKS\\setup.exe /s\n4. Verify registration in ConsoleOne."
+      }
+    },
+    {
+      "id": "KB4109104",
+      "process": "Systems & Configuration",
+      "domain": "Legacy Systems",
+      "tech": "Mercury Mail",
+      "type": "How To",
+      "title": "Mercury/32 MTS Configuration on NetWare",
+      "fields": {
+        "intro": "Configuring Mercury Mail Transport System for NLM.",
+        "instr": "1. Load MERCURY.NLM in autoexec.ncf.\n2. Edit MERCURY.INI to define local domains.\n3. Configure Module S (SMTP Client) for relaying.\n4. Configure Module P (POP3 Server) for client access."
+      }
+    },
+    {
+      "id": "KB4109105",
+      "process": "Systems & Configuration",
+      "domain": "Legacy Systems",
+      "tech": "Pegasus Mail",
+      "type": "FAQ",
+      "title": "Pegasus Mail on Windows 10",
+      "fields": {
+        "q": "Can Pegasus Mail (Pmail) run on Windows 10?",
+        "a": "Yes. Install in C:\\PMAIL (avoid Program Files due to write permissions). Ensure 'Ierenderer' is disabled if experiencing crashes."
+      }
+    },
+    {
+      "id": "KB4109001",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2003",
+      "type": "How To",
+      "title": "Legacy Build: Windows Server 2003",
+      "fields": {
+        "intro": "SOP for legacy 32-bit architecture installation. *EOL OS*",
+        "instr": "1. Boot from CD media.\n2. Press F6 for RAID drivers (Floppy).\n3. Format NTFS.\n4. Install SP2 immediately via offline media.\n5. Disable IE Enhanced Security Configuration."
+      }
+    },
+    {
+      "id": "KB4109003",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2012 R2",
+      "type": "How To",
+      "title": "Build Standard: Windows Server 2012 R2",
+      "fields": {
+        "intro": "Standard image deployment for 2012 R2.",
+        "instr": "1. Select 'Server with a GUI'.\n2. Configure NIC Teaming (lbfoadmin).\n3. Install PowerShell 4.0.\n4. Join Domain."
+      }
+    },
+    {
+      "id": "KB4109004",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2016",
+      "type": "How To",
+      "title": "Build Standard: Windows Server 2016",
+      "fields": {
+        "intro": "Installation procedure for Server 2016.",
+        "instr": "1. Boot from ISO.\n2. Select 'Desktop Experience' (otherwise Core is installed).\n3. Disable Windows Defender real-time protection if installing 3rd party AV immediately.\n4. Run Windows Update."
+      }
+    },
+    {
+      "id": "KB4109005",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2025",
+      "type": "How To",
+      "title": "Next-Gen Build: Windows Server 2025",
+      "fields": {
+        "intro": "Modern installation using Hotpatching and Azure Arc.",
+        "instr": "1. Boot from ISO/USB.\n2. Select 'Standard Desktop Experience'.\n3. Skip key for KMS.\n4. Enable Hotpatching in SConfig.\n5. Onboard to Azure Arc."
+      }
+    },
+    {
+      "id": "KB4109201",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "SCCM",
+      "type": "How To",
+      "title": "Install SCCM Primary Site",
+      "fields": {
+        "intro": "Step-by-step for System Center Configuration Manager (Current Branch).",
+        "instr": "1. Prereq: Install ADK and WinPE add-on.\n2. Install SQL Server 2019 + CU.\n3. Extend AD Schema (System Management container).\n4. Run Setup.exe -> Install Primary Site.\n5. Configure Boundaries and Boundary Groups."
+      }
+    },
+    {
+      "id": "KB4109202",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "SCCM",
+      "type": "KCS Article",
+      "title": "Error: PXE Boot Failed (0x80070002)",
+      "fields": {
+        "issue": "Clients cannot PXE boot for OSD.",
+        "env": "SCCM CB, Distribution Point.",
+        "cause": "Missing Boot Image on DP.",
+        "res": "Distribute x64 and x86 Boot Images to the DP. Check SMSPXE.log."
+      }
+    },
+    {
+      "id": "KB4109301",
+      "process": "Security & Compliance",
+      "domain": "Network",
+      "tech": "Firewall Auditing",
+      "type": "How To",
+      "title": "Perform Firewall Rule Base Audit",
+      "fields": {
+        "intro": "Quarterly review procedure for firewall rules.",
+        "instr": "1. Export configuration.\n2. Identify rules with 'Any' in Source or Destination.\n3. Identify unused rules (0 hit count).\n4. Verify justification for temporary allow rules.\n5. Archive report in Compliance folder."
+      }
+    },
+    {
+      "id": "KB4109302",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Network Analysis",
+      "type": "How To",
+      "title": "Packet Capture Analysis with Wireshark",
+      "fields": {
+        "intro": "Analyzing traffic for latency or drops.",
+        "instr": "1. Setup SPAN port on switch.\n2. Launch Wireshark.\n3. Filter: 'tcp.analysis.flags' to see retransmissions.\n4. Check Delta Time between packets to identify server vs network delay."
+      }
+    },
+    {
+      "id": "KB4109303",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Network Analysis",
+      "type": "What Is",
+      "title": "NetFlow vs sFlow",
+      "fields": {
+        "intro": "Understanding flow technologies.",
+        "expl": "NetFlow (Cisco) tracks all packets in a flow. sFlow is a sampled protocol. For security forensics, NetFlow is preferred."
+      }
+    },
+    {
+      "id": "KB4104001",
+      "process": "Change Requests",
+      "domain": "Network",
+      "tech": "VLANs",
+      "type": "How To",
+      "title": "Implementing VLANs Standard",
+      "fields": {
+        "intro": "This comprehensive guide follows the standard for implementing Virtual Local Area Networks (VLANs). \n\nWhat is a VLAN? A VLAN is a logical, software-defined subnetwork that allows devices to be grouped together into one broadcast domain, irrespective of their physical position. Primary purposes include congestion control which reduces the size of broadcast domains and ideally limits broadcasts to under 30 per second, security by segregating sensitive traffic such as staff versus student networks, and voice quality by isolating IP phone traffic to ensure QoS. Prerequisites include completion of the VLAN Deployment Plan Worksheet, console or SSH access to core and edge switches, and knowledge of which ports are uplinks versus end-user connections.",
+        "instr": "<h3>Step 1: Plan the VLAN Design</h3>\n<p>Identify the purpose of each VLAN, assign VLAN IDs, and document which devices and switch ports will belong to each VLAN.</p>\n<h3>Step 2: Create the VLAN</h3>\n<p>On the switch, create the VLAN using the assigned VLAN ID and name.</p>\n<h3>Step 3: Assign Switch Ports to the VLAN</h3>\n<p>Configure access ports on the switch and assign them to the appropriate VLAN based on the connected devices.</p>\n<h3>Step 4: Configure Trunk Ports</h3>\n<p>Configure trunk ports between switches to allow traffic from multiple VLANs to pass between network devices.</p>\n<h3>Step 5: Verify VLAN Configuration</h3>\n<p>Verify that VLANs are properly configured by checking switch status and testing connectivity between devices in the same VLAN.</p>\n<h3>Step 6: Test Inter-VLAN Communication (If Required)</h3>\n<p>If communication between VLANs is required, ensure inter-VLAN routing is configured and test connectivity between VLANs.</p>"
+      }
+    },
+    {
+      "id": "KB4101001",
+      "process": "Access Requests",
+      "domain": "Network",
+      "tech": "VPN",
+      "type": "How To",
+      "title": "Request VPN Access",
+      "fields": {
+        "intro": "Standard procedure for remote VPN access.",
+        "instr": "1. Navigate to Service Portal.\n2. Search 'VPN Request'.\n3. Submit for approval."
+      }
+    },
+    {
+      "id": "KB4101002",
+      "process": "Access Requests",
+      "domain": "Server",
+      "tech": "Active Directory",
+      "type": "How To",
+      "title": "AD Group Access Request",
+      "fields": {
+        "intro": "Request AD group access.",
+        "instr": "1. Submit request in Service Catalog.\n2. Select 'Identity Management'.\n3. Search AD Group name."
+      }
+    },
+    {
+      "id": "KB4105000",
+      "process": "Systems & Configuration",
+      "domain": "Legacy Systems",
+      "tech": "NetWare 6.5",
+      "type": "FAQ",
+      "title": "Common Questions about NetWare 6.5",
+      "fields": {
+        "q": "What is the log retention for NetWare 6.5?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105001",
+      "process": "Systems & Configuration",
+      "domain": "Legacy Systems",
+      "tech": "NetWare 6.5",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in NetWare 6.5",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "NetWare 6.5 Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105002",
+      "process": "Systems & Configuration",
+      "domain": "Legacy Systems",
+      "tech": "NetWare 6.5",
+      "type": "What Is",
+      "title": "NetWare 6.5 Overview",
+      "fields": {
+        "intro": "NetWare 6.5 is a critical component.",
+        "expl": "We utilize NetWare 6.5 for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105003",
+      "process": "Systems & Configuration",
+      "domain": "Legacy Systems",
+      "tech": "Novell GroupWise",
+      "type": "FAQ",
+      "title": "Common Questions about Novell GroupWise",
+      "fields": {
+        "q": "What is the log retention for Novell GroupWise?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105004",
+      "process": "Systems & Configuration",
+      "domain": "Legacy Systems",
+      "tech": "Novell GroupWise",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Novell GroupWise",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Novell GroupWise Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105005",
+      "process": "Systems & Configuration",
+      "domain": "Legacy Systems",
+      "tech": "Novell GroupWise",
+      "type": "What Is",
+      "title": "Novell GroupWise Overview",
+      "fields": {
+        "intro": "Novell GroupWise is a critical component.",
+        "expl": "We utilize Novell GroupWise for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105006",
+      "process": "Systems & Configuration",
+      "domain": "Legacy Systems",
+      "tech": "Novell ZENworks",
+      "type": "FAQ",
+      "title": "Common Questions about Novell ZENworks",
+      "fields": {
+        "q": "What is the log retention for Novell ZENworks?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105007",
+      "process": "Systems & Configuration",
+      "domain": "Legacy Systems",
+      "tech": "Novell ZENworks",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Novell ZENworks",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Novell ZENworks Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105008",
+      "process": "Systems & Configuration",
+      "domain": "Legacy Systems",
+      "tech": "Novell ZENworks",
+      "type": "What Is",
+      "title": "Novell ZENworks Overview",
+      "fields": {
+        "intro": "Novell ZENworks is a critical component.",
+        "expl": "We utilize Novell ZENworks for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105009",
+      "process": "Systems & Configuration",
+      "domain": "Legacy Systems",
+      "tech": "Mercury Mail",
+      "type": "FAQ",
+      "title": "Common Questions about Mercury Mail",
+      "fields": {
+        "q": "What is the log retention for Mercury Mail?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105010",
+      "process": "Systems & Configuration",
+      "domain": "Legacy Systems",
+      "tech": "Mercury Mail",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Mercury Mail",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Mercury Mail Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105011",
+      "process": "Systems & Configuration",
+      "domain": "Legacy Systems",
+      "tech": "Mercury Mail",
+      "type": "What Is",
+      "title": "Mercury Mail Overview",
+      "fields": {
+        "intro": "Mercury Mail is a critical component.",
+        "expl": "We utilize Mercury Mail for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105012",
+      "process": "Systems & Configuration",
+      "domain": "Legacy Systems",
+      "tech": "Pegasus Mail",
+      "type": "How To",
+      "title": "Configure Pegasus Mail Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Pegasus Mail.",
+        "instr": "1. Log in to Pegasus Mail console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105013",
+      "process": "Systems & Configuration",
+      "domain": "Legacy Systems",
+      "tech": "Pegasus Mail",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Pegasus Mail",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Pegasus Mail Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105014",
+      "process": "Systems & Configuration",
+      "domain": "Legacy Systems",
+      "tech": "Pegasus Mail",
+      "type": "What Is",
+      "title": "Pegasus Mail Overview",
+      "fields": {
+        "intro": "Pegasus Mail is a critical component.",
+        "expl": "We utilize Pegasus Mail for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105015",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2003",
+      "type": "FAQ",
+      "title": "Common Questions about Windows Server 2003",
+      "fields": {
+        "q": "What is the log retention for Windows Server 2003?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105016",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2003",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Windows Server 2003",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Windows Server 2003 Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105017",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2003",
+      "type": "What Is",
+      "title": "Windows Server 2003 Overview",
+      "fields": {
+        "intro": "Windows Server 2003 is a critical component.",
+        "expl": "We utilize Windows Server 2003 for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105018",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2003",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Windows Server 2003",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105019",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2008 R2",
+      "type": "How To",
+      "title": "Configure Windows Server 2008 R2 Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Windows Server 2008 R2.",
+        "instr": "1. Log in to Windows Server 2008 R2 console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105020",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2008 R2",
+      "type": "FAQ",
+      "title": "Common Questions about Windows Server 2008 R2",
+      "fields": {
+        "q": "What is the log retention for Windows Server 2008 R2?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105021",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2008 R2",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Windows Server 2008 R2",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Windows Server 2008 R2 Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105022",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2008 R2",
+      "type": "What Is",
+      "title": "Windows Server 2008 R2 Overview",
+      "fields": {
+        "intro": "Windows Server 2008 R2 is a critical component.",
+        "expl": "We utilize Windows Server 2008 R2 for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105023",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2008 R2",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Windows Server 2008 R2",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105024",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2012 R2",
+      "type": "FAQ",
+      "title": "Common Questions about Windows Server 2012 R2",
+      "fields": {
+        "q": "What is the log retention for Windows Server 2012 R2?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105025",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2012 R2",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Windows Server 2012 R2",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Windows Server 2012 R2 Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105026",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2012 R2",
+      "type": "What Is",
+      "title": "Windows Server 2012 R2 Overview",
+      "fields": {
+        "intro": "Windows Server 2012 R2 is a critical component.",
+        "expl": "We utilize Windows Server 2012 R2 for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105027",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2012 R2",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Windows Server 2012 R2",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105028",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2016",
+      "type": "FAQ",
+      "title": "Common Questions about Windows Server 2016",
+      "fields": {
+        "q": "What is the log retention for Windows Server 2016?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105029",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2016",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Windows Server 2016",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Windows Server 2016 Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105030",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2016",
+      "type": "What Is",
+      "title": "Windows Server 2016 Overview",
+      "fields": {
+        "intro": "Windows Server 2016 is a critical component.",
+        "expl": "We utilize Windows Server 2016 for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105031",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2016",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Windows Server 2016",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105032",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2019",
+      "type": "How To",
+      "title": "Configure Windows Server 2019 Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Windows Server 2019.",
+        "instr": "1. Log in to Windows Server 2019 console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105033",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2019",
+      "type": "FAQ",
+      "title": "Common Questions about Windows Server 2019",
+      "fields": {
+        "q": "What is the log retention for Windows Server 2019?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105034",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2019",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Windows Server 2019",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Windows Server 2019 Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105035",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2019",
+      "type": "What Is",
+      "title": "Windows Server 2019 Overview",
+      "fields": {
+        "intro": "Windows Server 2019 is a critical component.",
+        "expl": "We utilize Windows Server 2019 for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105036",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2019",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Windows Server 2019",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105037",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2022",
+      "type": "How To",
+      "title": "Configure Windows Server 2022 Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Windows Server 2022.",
+        "instr": "1. Log in to Windows Server 2022 console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105038",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2022",
+      "type": "FAQ",
+      "title": "Common Questions about Windows Server 2022",
+      "fields": {
+        "q": "What is the log retention for Windows Server 2022?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105039",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2022",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Windows Server 2022",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Windows Server 2022 Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105040",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2022",
+      "type": "What Is",
+      "title": "Windows Server 2022 Overview",
+      "fields": {
+        "intro": "Windows Server 2022 is a critical component.",
+        "expl": "We utilize Windows Server 2022 for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105041",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2022",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Windows Server 2022",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105042",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2025",
+      "type": "FAQ",
+      "title": "Common Questions about Windows Server 2025",
+      "fields": {
+        "q": "What is the log retention for Windows Server 2025?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105043",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2025",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Windows Server 2025",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Windows Server 2025 Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105044",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2025",
+      "type": "What Is",
+      "title": "Windows Server 2025 Overview",
+      "fields": {
+        "intro": "Windows Server 2025 is a critical component.",
+        "expl": "We utilize Windows Server 2025 for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105045",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Windows Server 2025",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Windows Server 2025",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105046",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "SCCM",
+      "type": "FAQ",
+      "title": "Common Questions about SCCM",
+      "fields": {
+        "q": "What is the log retention for SCCM?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105047",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "SCCM",
+      "type": "What Is",
+      "title": "SCCM Overview",
+      "fields": {
+        "intro": "SCCM is a critical component.",
+        "expl": "We utilize SCCM for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105048",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "SCCM",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for SCCM",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105049",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Linux Server",
+      "type": "How To",
+      "title": "Configure Linux Server Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Linux Server.",
+        "instr": "1. Log in to Linux Server console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105050",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Linux Server",
+      "type": "FAQ",
+      "title": "Common Questions about Linux Server",
+      "fields": {
+        "q": "What is the log retention for Linux Server?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105051",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Linux Server",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Linux Server",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Linux Server Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105052",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Linux Server",
+      "type": "What Is",
+      "title": "Linux Server Overview",
+      "fields": {
+        "intro": "Linux Server is a critical component.",
+        "expl": "We utilize Linux Server for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105053",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Linux Server",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Linux Server",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105054",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Group Policy",
+      "type": "How To",
+      "title": "Configure Group Policy Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Group Policy.",
+        "instr": "1. Log in to Group Policy console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105055",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Group Policy",
+      "type": "FAQ",
+      "title": "Common Questions about Group Policy",
+      "fields": {
+        "q": "What is the log retention for Group Policy?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105056",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Group Policy",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Group Policy",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Group Policy Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105057",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Group Policy",
+      "type": "What Is",
+      "title": "Group Policy Overview",
+      "fields": {
+        "intro": "Group Policy is a critical component.",
+        "expl": "We utilize Group Policy for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105058",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "Group Policy",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Group Policy",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105059",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "WSUS",
+      "type": "How To",
+      "title": "Configure WSUS Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for WSUS.",
+        "instr": "1. Log in to WSUS console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105060",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "WSUS",
+      "type": "FAQ",
+      "title": "Common Questions about WSUS",
+      "fields": {
+        "q": "What is the log retention for WSUS?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105061",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "WSUS",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in WSUS",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "WSUS Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105062",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "WSUS",
+      "type": "What Is",
+      "title": "WSUS Overview",
+      "fields": {
+        "intro": "WSUS is a critical component.",
+        "expl": "We utilize WSUS for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105063",
+      "process": "Systems & Configuration",
+      "domain": "Server",
+      "tech": "WSUS",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for WSUS",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105064",
+      "process": "Security & Compliance",
+      "domain": "Network",
+      "tech": "Firewall Auditing",
+      "type": "FAQ",
+      "title": "Common Questions about Firewall Auditing",
+      "fields": {
+        "q": "What is the log retention for Firewall Auditing?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105065",
+      "process": "Security & Compliance",
+      "domain": "Network",
+      "tech": "Firewall Auditing",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Firewall Auditing",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Firewall Auditing Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105066",
+      "process": "Security & Compliance",
+      "domain": "Network",
+      "tech": "Firewall Auditing",
+      "type": "What Is",
+      "title": "Firewall Auditing Overview",
+      "fields": {
+        "intro": "Firewall Auditing is a critical component.",
+        "expl": "We utilize Firewall Auditing for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105067",
+      "process": "Security & Compliance",
+      "domain": "Network",
+      "tech": "Firewall Auditing",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Firewall Auditing",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105068",
+      "process": "Security & Compliance",
+      "domain": "Network",
+      "tech": "DNS Security",
+      "type": "How To",
+      "title": "Configure DNS Security Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for DNS Security.",
+        "instr": "1. Log in to DNS Security console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105069",
+      "process": "Security & Compliance",
+      "domain": "Network",
+      "tech": "DNS Security",
+      "type": "FAQ",
+      "title": "Common Questions about DNS Security",
+      "fields": {
+        "q": "What is the log retention for DNS Security?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105070",
+      "process": "Security & Compliance",
+      "domain": "Network",
+      "tech": "DNS Security",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in DNS Security",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "DNS Security Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105071",
+      "process": "Security & Compliance",
+      "domain": "Network",
+      "tech": "DNS Security",
+      "type": "What Is",
+      "title": "DNS Security Overview",
+      "fields": {
+        "intro": "DNS Security is a critical component.",
+        "expl": "We utilize DNS Security for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105072",
+      "process": "Security & Compliance",
+      "domain": "Network",
+      "tech": "DNS Security",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for DNS Security",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105073",
+      "process": "Security & Compliance",
+      "domain": "Network",
+      "tech": "NAC",
+      "type": "How To",
+      "title": "Configure NAC Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for NAC.",
+        "instr": "1. Log in to NAC console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105074",
+      "process": "Security & Compliance",
+      "domain": "Network",
+      "tech": "NAC",
+      "type": "FAQ",
+      "title": "Common Questions about NAC",
+      "fields": {
+        "q": "What is the log retention for NAC?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105075",
+      "process": "Security & Compliance",
+      "domain": "Network",
+      "tech": "NAC",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in NAC",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "NAC Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105076",
+      "process": "Security & Compliance",
+      "domain": "Network",
+      "tech": "NAC",
+      "type": "What Is",
+      "title": "NAC Overview",
+      "fields": {
+        "intro": "NAC is a critical component.",
+        "expl": "We utilize NAC for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105077",
+      "process": "Security & Compliance",
+      "domain": "Network",
+      "tech": "NAC",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for NAC",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105078",
+      "process": "Security & Compliance",
+      "domain": "Network",
+      "tech": "Port Security",
+      "type": "How To",
+      "title": "Configure Port Security Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Port Security.",
+        "instr": "1. Log in to Port Security console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105079",
+      "process": "Security & Compliance",
+      "domain": "Network",
+      "tech": "Port Security",
+      "type": "FAQ",
+      "title": "Common Questions about Port Security",
+      "fields": {
+        "q": "What is the log retention for Port Security?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105080",
+      "process": "Security & Compliance",
+      "domain": "Network",
+      "tech": "Port Security",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Port Security",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Port Security Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105081",
+      "process": "Security & Compliance",
+      "domain": "Network",
+      "tech": "Port Security",
+      "type": "What Is",
+      "title": "Port Security Overview",
+      "fields": {
+        "intro": "Port Security is a critical component.",
+        "expl": "We utilize Port Security for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105082",
+      "process": "Security & Compliance",
+      "domain": "Network",
+      "tech": "Port Security",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Port Security",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105083",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Network Analysis",
+      "type": "FAQ",
+      "title": "Common Questions about Network Analysis",
+      "fields": {
+        "q": "What is the log retention for Network Analysis?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105084",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Network Analysis",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Network Analysis",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Network Analysis Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105085",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Network Analysis",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Network Analysis",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105086",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "BGP",
+      "type": "How To",
+      "title": "Configure BGP Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for BGP.",
+        "instr": "1. Log in to BGP console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105087",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "BGP",
+      "type": "FAQ",
+      "title": "Common Questions about BGP",
+      "fields": {
+        "q": "What is the log retention for BGP?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105088",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "BGP",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in BGP",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "BGP Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105089",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "BGP",
+      "type": "What Is",
+      "title": "BGP Overview",
+      "fields": {
+        "intro": "BGP is a critical component.",
+        "expl": "We utilize BGP for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105090",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "BGP",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for BGP",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105091",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "OSPF",
+      "type": "How To",
+      "title": "Configure OSPF Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for OSPF.",
+        "instr": "1. Log in to OSPF console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105092",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "OSPF",
+      "type": "FAQ",
+      "title": "Common Questions about OSPF",
+      "fields": {
+        "q": "What is the log retention for OSPF?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105093",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "OSPF",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in OSPF",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "OSPF Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105094",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "OSPF",
+      "type": "What Is",
+      "title": "OSPF Overview",
+      "fields": {
+        "intro": "OSPF is a critical component.",
+        "expl": "We utilize OSPF for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105095",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "OSPF",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for OSPF",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105096",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Cisco Meraki",
+      "type": "How To",
+      "title": "Configure Cisco Meraki Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Cisco Meraki.",
+        "instr": "1. Log in to Cisco Meraki console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105097",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Cisco Meraki",
+      "type": "FAQ",
+      "title": "Common Questions about Cisco Meraki",
+      "fields": {
+        "q": "What is the log retention for Cisco Meraki?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105098",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Cisco Meraki",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Cisco Meraki",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Cisco Meraki Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105099",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Cisco Meraki",
+      "type": "What Is",
+      "title": "Cisco Meraki Overview",
+      "fields": {
+        "intro": "Cisco Meraki is a critical component.",
+        "expl": "We utilize Cisco Meraki for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105100",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Cisco Meraki",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Cisco Meraki",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105101",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Palo Alto",
+      "type": "How To",
+      "title": "Configure Palo Alto Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Palo Alto.",
+        "instr": "1. Log in to Palo Alto console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105102",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Palo Alto",
+      "type": "FAQ",
+      "title": "Common Questions about Palo Alto",
+      "fields": {
+        "q": "What is the log retention for Palo Alto?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105103",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Palo Alto",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Palo Alto",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Palo Alto Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105104",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Palo Alto",
+      "type": "What Is",
+      "title": "Palo Alto Overview",
+      "fields": {
+        "intro": "Palo Alto is a critical component.",
+        "expl": "We utilize Palo Alto for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105105",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Palo Alto",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Palo Alto",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105106",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Fortinet",
+      "type": "How To",
+      "title": "Configure Fortinet Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Fortinet.",
+        "instr": "1. Log in to Fortinet console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105107",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Fortinet",
+      "type": "FAQ",
+      "title": "Common Questions about Fortinet",
+      "fields": {
+        "q": "What is the log retention for Fortinet?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105108",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Fortinet",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Fortinet",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Fortinet Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105109",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Fortinet",
+      "type": "What Is",
+      "title": "Fortinet Overview",
+      "fields": {
+        "intro": "Fortinet is a critical component.",
+        "expl": "We utilize Fortinet for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105110",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Fortinet",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Fortinet",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105111",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Cisco ASA",
+      "type": "How To",
+      "title": "Configure Cisco ASA Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Cisco ASA.",
+        "instr": "1. Log in to Cisco ASA console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105112",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Cisco ASA",
+      "type": "FAQ",
+      "title": "Common Questions about Cisco ASA",
+      "fields": {
+        "q": "What is the log retention for Cisco ASA?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105113",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Cisco ASA",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Cisco ASA",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Cisco ASA Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105114",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Cisco ASA",
+      "type": "What Is",
+      "title": "Cisco ASA Overview",
+      "fields": {
+        "intro": "Cisco ASA is a critical component.",
+        "expl": "We utilize Cisco ASA for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105115",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Cisco ASA",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Cisco ASA",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105116",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Aruba",
+      "type": "How To",
+      "title": "Configure Aruba Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Aruba.",
+        "instr": "1. Log in to Aruba console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105117",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Aruba",
+      "type": "FAQ",
+      "title": "Common Questions about Aruba",
+      "fields": {
+        "q": "What is the log retention for Aruba?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105118",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Aruba",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Aruba",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Aruba Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105119",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Aruba",
+      "type": "What Is",
+      "title": "Aruba Overview",
+      "fields": {
+        "intro": "Aruba is a critical component.",
+        "expl": "We utilize Aruba for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105120",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Aruba",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Aruba",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105121",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Wireless",
+      "type": "How To",
+      "title": "Configure Wireless Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Wireless.",
+        "instr": "1. Log in to Wireless console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105122",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Wireless",
+      "type": "FAQ",
+      "title": "Common Questions about Wireless",
+      "fields": {
+        "q": "What is the log retention for Wireless?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105123",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Wireless",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Wireless",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Wireless Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105124",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Wireless",
+      "type": "What Is",
+      "title": "Wireless Overview",
+      "fields": {
+        "intro": "Wireless is a critical component.",
+        "expl": "We utilize Wireless for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105125",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Network",
+      "tech": "Wireless",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Wireless",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105126",
+      "process": "Access Requests",
+      "domain": "Security",
+      "tech": "Active Directory",
+      "type": "FAQ",
+      "title": "Common Questions about Active Directory",
+      "fields": {
+        "q": "What is the log retention for Active Directory?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105127",
+      "process": "Access Requests",
+      "domain": "Security",
+      "tech": "Active Directory",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Active Directory",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Active Directory Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105128",
+      "process": "Access Requests",
+      "domain": "Security",
+      "tech": "Active Directory",
+      "type": "What Is",
+      "title": "Active Directory Overview",
+      "fields": {
+        "intro": "Active Directory is a critical component.",
+        "expl": "We utilize Active Directory for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105129",
+      "process": "Access Requests",
+      "domain": "Security",
+      "tech": "Active Directory",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Active Directory",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105130",
+      "process": "Access Requests",
+      "domain": "Security",
+      "tech": "MFA",
+      "type": "How To",
+      "title": "Configure MFA Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for MFA.",
+        "instr": "1. Log in to MFA console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105131",
+      "process": "Access Requests",
+      "domain": "Security",
+      "tech": "MFA",
+      "type": "FAQ",
+      "title": "Common Questions about MFA",
+      "fields": {
+        "q": "What is the log retention for MFA?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105132",
+      "process": "Access Requests",
+      "domain": "Security",
+      "tech": "MFA",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in MFA",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "MFA Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105133",
+      "process": "Access Requests",
+      "domain": "Security",
+      "tech": "MFA",
+      "type": "What Is",
+      "title": "MFA Overview",
+      "fields": {
+        "intro": "MFA is a critical component.",
+        "expl": "We utilize MFA for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105134",
+      "process": "Access Requests",
+      "domain": "Security",
+      "tech": "MFA",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for MFA",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105135",
+      "process": "Access Requests",
+      "domain": "Security",
+      "tech": "Privileged Access",
+      "type": "How To",
+      "title": "Configure Privileged Access Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Privileged Access.",
+        "instr": "1. Log in to Privileged Access console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105136",
+      "process": "Access Requests",
+      "domain": "Security",
+      "tech": "Privileged Access",
+      "type": "FAQ",
+      "title": "Common Questions about Privileged Access",
+      "fields": {
+        "q": "What is the log retention for Privileged Access?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105137",
+      "process": "Access Requests",
+      "domain": "Security",
+      "tech": "Privileged Access",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Privileged Access",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Privileged Access Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105138",
+      "process": "Access Requests",
+      "domain": "Security",
+      "tech": "Privileged Access",
+      "type": "What Is",
+      "title": "Privileged Access Overview",
+      "fields": {
+        "intro": "Privileged Access is a critical component.",
+        "expl": "We utilize Privileged Access for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105139",
+      "process": "Access Requests",
+      "domain": "Security",
+      "tech": "Privileged Access",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Privileged Access",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105140",
+      "process": "Access Requests",
+      "domain": "Security",
+      "tech": "CyberArk",
+      "type": "How To",
+      "title": "Configure CyberArk Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for CyberArk.",
+        "instr": "1. Log in to CyberArk console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105141",
+      "process": "Access Requests",
+      "domain": "Security",
+      "tech": "CyberArk",
+      "type": "FAQ",
+      "title": "Common Questions about CyberArk",
+      "fields": {
+        "q": "What is the log retention for CyberArk?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105142",
+      "process": "Access Requests",
+      "domain": "Security",
+      "tech": "CyberArk",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in CyberArk",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "CyberArk Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105143",
+      "process": "Access Requests",
+      "domain": "Security",
+      "tech": "CyberArk",
+      "type": "What Is",
+      "title": "CyberArk Overview",
+      "fields": {
+        "intro": "CyberArk is a critical component.",
+        "expl": "We utilize CyberArk for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105144",
+      "process": "Access Requests",
+      "domain": "Security",
+      "tech": "CyberArk",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for CyberArk",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105145",
+      "process": "Access Requests",
+      "domain": "Network",
+      "tech": "VPN",
+      "type": "FAQ",
+      "title": "Common Questions about VPN",
+      "fields": {
+        "q": "What is the log retention for VPN?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105146",
+      "process": "Access Requests",
+      "domain": "Network",
+      "tech": "VPN",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in VPN",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "VPN Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105147",
+      "process": "Access Requests",
+      "domain": "Network",
+      "tech": "VPN",
+      "type": "What Is",
+      "title": "VPN Overview",
+      "fields": {
+        "intro": "VPN is a critical component.",
+        "expl": "We utilize VPN for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105148",
+      "process": "Access Requests",
+      "domain": "Network",
+      "tech": "VPN",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for VPN",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105149",
+      "process": "Access Requests",
+      "domain": "Network",
+      "tech": "Cisco AnyConnect",
+      "type": "How To",
+      "title": "Configure Cisco AnyConnect Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Cisco AnyConnect.",
+        "instr": "1. Log in to Cisco AnyConnect console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105150",
+      "process": "Access Requests",
+      "domain": "Network",
+      "tech": "Cisco AnyConnect",
+      "type": "FAQ",
+      "title": "Common Questions about Cisco AnyConnect",
+      "fields": {
+        "q": "What is the log retention for Cisco AnyConnect?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105151",
+      "process": "Access Requests",
+      "domain": "Network",
+      "tech": "Cisco AnyConnect",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Cisco AnyConnect",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Cisco AnyConnect Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105152",
+      "process": "Access Requests",
+      "domain": "Network",
+      "tech": "Cisco AnyConnect",
+      "type": "What Is",
+      "title": "Cisco AnyConnect Overview",
+      "fields": {
+        "intro": "Cisco AnyConnect is a critical component.",
+        "expl": "We utilize Cisco AnyConnect for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105153",
+      "process": "Access Requests",
+      "domain": "Network",
+      "tech": "Cisco AnyConnect",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Cisco AnyConnect",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105154",
+      "process": "Access Requests",
+      "domain": "Network",
+      "tech": "Remote Access",
+      "type": "How To",
+      "title": "Configure Remote Access Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Remote Access.",
+        "instr": "1. Log in to Remote Access console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105155",
+      "process": "Access Requests",
+      "domain": "Network",
+      "tech": "Remote Access",
+      "type": "FAQ",
+      "title": "Common Questions about Remote Access",
+      "fields": {
+        "q": "What is the log retention for Remote Access?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105156",
+      "process": "Access Requests",
+      "domain": "Network",
+      "tech": "Remote Access",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Remote Access",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Remote Access Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105157",
+      "process": "Access Requests",
+      "domain": "Network",
+      "tech": "Remote Access",
+      "type": "What Is",
+      "title": "Remote Access Overview",
+      "fields": {
+        "intro": "Remote Access is a critical component.",
+        "expl": "We utilize Remote Access for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105158",
+      "process": "Access Requests",
+      "domain": "Network",
+      "tech": "Remote Access",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Remote Access",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105159",
+      "process": "Change Requests",
+      "domain": "Network",
+      "tech": "Firewall Rules",
+      "type": "How To",
+      "title": "Configure Firewall Rules Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Firewall Rules.",
+        "instr": "1. Log in to Firewall Rules console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105160",
+      "process": "Change Requests",
+      "domain": "Network",
+      "tech": "Firewall Rules",
+      "type": "FAQ",
+      "title": "Common Questions about Firewall Rules",
+      "fields": {
+        "q": "What is the log retention for Firewall Rules?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105161",
+      "process": "Change Requests",
+      "domain": "Network",
+      "tech": "Firewall Rules",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Firewall Rules",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Firewall Rules Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105162",
+      "process": "Change Requests",
+      "domain": "Network",
+      "tech": "Firewall Rules",
+      "type": "What Is",
+      "title": "Firewall Rules Overview",
+      "fields": {
+        "intro": "Firewall Rules is a critical component.",
+        "expl": "We utilize Firewall Rules for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105163",
+      "process": "Change Requests",
+      "domain": "Network",
+      "tech": "Firewall Rules",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Firewall Rules",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105164",
+      "process": "Change Requests",
+      "domain": "Network",
+      "tech": "F5 LTM",
+      "type": "How To",
+      "title": "Configure F5 LTM Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for F5 LTM.",
+        "instr": "1. Log in to F5 LTM console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105165",
+      "process": "Change Requests",
+      "domain": "Network",
+      "tech": "F5 LTM",
+      "type": "FAQ",
+      "title": "Common Questions about F5 LTM",
+      "fields": {
+        "q": "What is the log retention for F5 LTM?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105166",
+      "process": "Change Requests",
+      "domain": "Network",
+      "tech": "F5 LTM",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in F5 LTM",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "F5 LTM Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105167",
+      "process": "Change Requests",
+      "domain": "Network",
+      "tech": "F5 LTM",
+      "type": "What Is",
+      "title": "F5 LTM Overview",
+      "fields": {
+        "intro": "F5 LTM is a critical component.",
+        "expl": "We utilize F5 LTM for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105168",
+      "process": "Change Requests",
+      "domain": "Network",
+      "tech": "F5 LTM",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for F5 LTM",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105169",
+      "process": "Change Requests",
+      "domain": "Network",
+      "tech": "VLANs",
+      "type": "FAQ",
+      "title": "Common Questions about VLANs",
+      "fields": {
+        "q": "What is the log retention for VLANs?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105170",
+      "process": "Change Requests",
+      "domain": "Network",
+      "tech": "VLANs",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in VLANs",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "VLANs Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105171",
+      "process": "Change Requests",
+      "domain": "Network",
+      "tech": "VLANs",
+      "type": "What Is",
+      "title": "VLANs Overview",
+      "fields": {
+        "intro": "VLANs is a critical component.",
+        "expl": "We utilize VLANs for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105172",
+      "process": "Change Requests",
+      "domain": "Network",
+      "tech": "VLANs",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for VLANs",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105173",
+      "process": "Change Requests",
+      "domain": "Network",
+      "tech": "Routing Changes",
+      "type": "How To",
+      "title": "Configure Routing Changes Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Routing Changes.",
+        "instr": "1. Log in to Routing Changes console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105174",
+      "process": "Change Requests",
+      "domain": "Network",
+      "tech": "Routing Changes",
+      "type": "FAQ",
+      "title": "Common Questions about Routing Changes",
+      "fields": {
+        "q": "What is the log retention for Routing Changes?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105175",
+      "process": "Change Requests",
+      "domain": "Network",
+      "tech": "Routing Changes",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Routing Changes",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Routing Changes Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105176",
+      "process": "Change Requests",
+      "domain": "Network",
+      "tech": "Routing Changes",
+      "type": "What Is",
+      "title": "Routing Changes Overview",
+      "fields": {
+        "intro": "Routing Changes is a critical component.",
+        "expl": "We utilize Routing Changes for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105177",
+      "process": "Change Requests",
+      "domain": "Network",
+      "tech": "Routing Changes",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Routing Changes",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105178",
+      "process": "Change Requests",
+      "domain": "Server",
+      "tech": "Capacity Management",
+      "type": "How To",
+      "title": "Configure Capacity Management Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Capacity Management.",
+        "instr": "1. Log in to Capacity Management console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105179",
+      "process": "Change Requests",
+      "domain": "Server",
+      "tech": "Capacity Management",
+      "type": "FAQ",
+      "title": "Common Questions about Capacity Management",
+      "fields": {
+        "q": "What is the log retention for Capacity Management?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105180",
+      "process": "Change Requests",
+      "domain": "Server",
+      "tech": "Capacity Management",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Capacity Management",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Capacity Management Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105181",
+      "process": "Change Requests",
+      "domain": "Server",
+      "tech": "Capacity Management",
+      "type": "What Is",
+      "title": "Capacity Management Overview",
+      "fields": {
+        "intro": "Capacity Management is a critical component.",
+        "expl": "We utilize Capacity Management for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105182",
+      "process": "Change Requests",
+      "domain": "Server",
+      "tech": "Capacity Management",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Capacity Management",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105183",
+      "process": "Change Requests",
+      "domain": "Server",
+      "tech": "Decommissioning",
+      "type": "How To",
+      "title": "Configure Decommissioning Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Decommissioning.",
+        "instr": "1. Log in to Decommissioning console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105184",
+      "process": "Change Requests",
+      "domain": "Server",
+      "tech": "Decommissioning",
+      "type": "FAQ",
+      "title": "Common Questions about Decommissioning",
+      "fields": {
+        "q": "What is the log retention for Decommissioning?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105185",
+      "process": "Change Requests",
+      "domain": "Server",
+      "tech": "Decommissioning",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Decommissioning",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Decommissioning Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105186",
+      "process": "Change Requests",
+      "domain": "Server",
+      "tech": "Decommissioning",
+      "type": "What Is",
+      "title": "Decommissioning Overview",
+      "fields": {
+        "intro": "Decommissioning is a critical component.",
+        "expl": "We utilize Decommissioning for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105187",
+      "process": "Change Requests",
+      "domain": "Server",
+      "tech": "Decommissioning",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Decommissioning",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105188",
+      "process": "Change Requests",
+      "domain": "Virtualization",
+      "tech": "VM Provisioning",
+      "type": "How To",
+      "title": "Configure VM Provisioning Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for VM Provisioning.",
+        "instr": "1. Log in to VM Provisioning console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105189",
+      "process": "Change Requests",
+      "domain": "Virtualization",
+      "tech": "VM Provisioning",
+      "type": "FAQ",
+      "title": "Common Questions about VM Provisioning",
+      "fields": {
+        "q": "What is the log retention for VM Provisioning?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105190",
+      "process": "Change Requests",
+      "domain": "Virtualization",
+      "tech": "VM Provisioning",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in VM Provisioning",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "VM Provisioning Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105191",
+      "process": "Change Requests",
+      "domain": "Virtualization",
+      "tech": "VM Provisioning",
+      "type": "What Is",
+      "title": "VM Provisioning Overview",
+      "fields": {
+        "intro": "VM Provisioning is a critical component.",
+        "expl": "We utilize VM Provisioning for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105192",
+      "process": "Change Requests",
+      "domain": "Virtualization",
+      "tech": "VM Provisioning",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for VM Provisioning",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105193",
+      "process": "Change Requests",
+      "domain": "Virtualization",
+      "tech": "AWS EC2",
+      "type": "How To",
+      "title": "Configure AWS EC2 Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for AWS EC2.",
+        "instr": "1. Log in to AWS EC2 console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105194",
+      "process": "Change Requests",
+      "domain": "Virtualization",
+      "tech": "AWS EC2",
+      "type": "FAQ",
+      "title": "Common Questions about AWS EC2",
+      "fields": {
+        "q": "What is the log retention for AWS EC2?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105195",
+      "process": "Change Requests",
+      "domain": "Virtualization",
+      "tech": "AWS EC2",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in AWS EC2",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "AWS EC2 Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105196",
+      "process": "Change Requests",
+      "domain": "Virtualization",
+      "tech": "AWS EC2",
+      "type": "What Is",
+      "title": "AWS EC2 Overview",
+      "fields": {
+        "intro": "AWS EC2 is a critical component.",
+        "expl": "We utilize AWS EC2 for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105197",
+      "process": "Change Requests",
+      "domain": "Virtualization",
+      "tech": "AWS EC2",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for AWS EC2",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105198",
+      "process": "Change Requests",
+      "domain": "Virtualization",
+      "tech": "Azure VMs",
+      "type": "How To",
+      "title": "Configure Azure VMs Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Azure VMs.",
+        "instr": "1. Log in to Azure VMs console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105199",
+      "process": "Change Requests",
+      "domain": "Virtualization",
+      "tech": "Azure VMs",
+      "type": "FAQ",
+      "title": "Common Questions about Azure VMs",
+      "fields": {
+        "q": "What is the log retention for Azure VMs?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105200",
+      "process": "Change Requests",
+      "domain": "Virtualization",
+      "tech": "Azure VMs",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Azure VMs",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Azure VMs Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105201",
+      "process": "Change Requests",
+      "domain": "Virtualization",
+      "tech": "Azure VMs",
+      "type": "What Is",
+      "title": "Azure VMs Overview",
+      "fields": {
+        "intro": "Azure VMs is a critical component.",
+        "expl": "We utilize Azure VMs for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105202",
+      "process": "Change Requests",
+      "domain": "Virtualization",
+      "tech": "Azure VMs",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Azure VMs",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105203",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Server",
+      "tech": "RHEL",
+      "type": "How To",
+      "title": "Configure RHEL Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for RHEL.",
+        "instr": "1. Log in to RHEL console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105204",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Server",
+      "tech": "RHEL",
+      "type": "FAQ",
+      "title": "Common Questions about RHEL",
+      "fields": {
+        "q": "What is the log retention for RHEL?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105205",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Server",
+      "tech": "RHEL",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in RHEL",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "RHEL Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105206",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Server",
+      "tech": "RHEL",
+      "type": "What Is",
+      "title": "RHEL Overview",
+      "fields": {
+        "intro": "RHEL is a critical component.",
+        "expl": "We utilize RHEL for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105207",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Server",
+      "tech": "RHEL",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for RHEL",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105208",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Server",
+      "tech": "Ubuntu",
+      "type": "How To",
+      "title": "Configure Ubuntu Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Ubuntu.",
+        "instr": "1. Log in to Ubuntu console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105209",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Server",
+      "tech": "Ubuntu",
+      "type": "FAQ",
+      "title": "Common Questions about Ubuntu",
+      "fields": {
+        "q": "What is the log retention for Ubuntu?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105210",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Server",
+      "tech": "Ubuntu",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Ubuntu",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Ubuntu Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105211",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Server",
+      "tech": "Ubuntu",
+      "type": "What Is",
+      "title": "Ubuntu Overview",
+      "fields": {
+        "intro": "Ubuntu is a critical component.",
+        "expl": "We utilize Ubuntu for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105212",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Server",
+      "tech": "Ubuntu",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Ubuntu",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105213",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Server",
+      "tech": "Apache",
+      "type": "How To",
+      "title": "Configure Apache Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Apache.",
+        "instr": "1. Log in to Apache console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105214",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Server",
+      "tech": "Apache",
+      "type": "FAQ",
+      "title": "Common Questions about Apache",
+      "fields": {
+        "q": "What is the log retention for Apache?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105215",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Server",
+      "tech": "Apache",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Apache",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Apache Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105216",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Server",
+      "tech": "Apache",
+      "type": "What Is",
+      "title": "Apache Overview",
+      "fields": {
+        "intro": "Apache is a critical component.",
+        "expl": "We utilize Apache for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105217",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Server",
+      "tech": "Apache",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Apache",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105218",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Server",
+      "tech": "IIS",
+      "type": "How To",
+      "title": "Configure IIS Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for IIS.",
+        "instr": "1. Log in to IIS console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105219",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Server",
+      "tech": "IIS",
+      "type": "FAQ",
+      "title": "Common Questions about IIS",
+      "fields": {
+        "q": "What is the log retention for IIS?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105220",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Server",
+      "tech": "IIS",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in IIS",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "IIS Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105221",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Server",
+      "tech": "IIS",
+      "type": "What Is",
+      "title": "IIS Overview",
+      "fields": {
+        "intro": "IIS is a critical component.",
+        "expl": "We utilize IIS for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105222",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Server",
+      "tech": "IIS",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for IIS",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105223",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Security",
+      "tech": "Incident Response",
+      "type": "How To",
+      "title": "Configure Incident Response Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Incident Response.",
+        "instr": "1. Log in to Incident Response console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105224",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Security",
+      "tech": "Incident Response",
+      "type": "FAQ",
+      "title": "Common Questions about Incident Response",
+      "fields": {
+        "q": "What is the log retention for Incident Response?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105225",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Security",
+      "tech": "Incident Response",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Incident Response",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Incident Response Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105226",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Security",
+      "tech": "Incident Response",
+      "type": "What Is",
+      "title": "Incident Response Overview",
+      "fields": {
+        "intro": "Incident Response is a critical component.",
+        "expl": "We utilize Incident Response for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105227",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Security",
+      "tech": "Incident Response",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Incident Response",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105228",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Security",
+      "tech": "Threat Detection",
+      "type": "How To",
+      "title": "Configure Threat Detection Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Threat Detection.",
+        "instr": "1. Log in to Threat Detection console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105229",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Security",
+      "tech": "Threat Detection",
+      "type": "FAQ",
+      "title": "Common Questions about Threat Detection",
+      "fields": {
+        "q": "What is the log retention for Threat Detection?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105230",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Security",
+      "tech": "Threat Detection",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Threat Detection",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Threat Detection Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105231",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Security",
+      "tech": "Threat Detection",
+      "type": "What Is",
+      "title": "Threat Detection Overview",
+      "fields": {
+        "intro": "Threat Detection is a critical component.",
+        "expl": "We utilize Threat Detection for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105232",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Security",
+      "tech": "Threat Detection",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Threat Detection",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105233",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Security",
+      "tech": "Graylog",
+      "type": "How To",
+      "title": "Configure Graylog Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Graylog.",
+        "instr": "1. Log in to Graylog console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105234",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Security",
+      "tech": "Graylog",
+      "type": "FAQ",
+      "title": "Common Questions about Graylog",
+      "fields": {
+        "q": "What is the log retention for Graylog?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105235",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Security",
+      "tech": "Graylog",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Graylog",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Graylog Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105236",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Security",
+      "tech": "Graylog",
+      "type": "What Is",
+      "title": "Graylog Overview",
+      "fields": {
+        "intro": "Graylog is a critical component.",
+        "expl": "We utilize Graylog for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105237",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Security",
+      "tech": "Graylog",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Graylog",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105238",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Security",
+      "tech": "Wazuh",
+      "type": "How To",
+      "title": "Configure Wazuh Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Wazuh.",
+        "instr": "1. Log in to Wazuh console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105239",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Security",
+      "tech": "Wazuh",
+      "type": "FAQ",
+      "title": "Common Questions about Wazuh",
+      "fields": {
+        "q": "What is the log retention for Wazuh?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105240",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Security",
+      "tech": "Wazuh",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Wazuh",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Wazuh Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105241",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Security",
+      "tech": "Wazuh",
+      "type": "What Is",
+      "title": "Wazuh Overview",
+      "fields": {
+        "intro": "Wazuh is a critical component.",
+        "expl": "We utilize Wazuh for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105242",
+      "process": "Incident Response & Troubleshooting",
+      "domain": "Security",
+      "tech": "Wazuh",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Wazuh",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105243",
+      "process": "Service Requests",
+      "domain": "Network",
+      "tech": "DNS/DHCP",
+      "type": "How To",
+      "title": "Configure DNS/DHCP Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for DNS/DHCP.",
+        "instr": "1. Log in to DNS/DHCP console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105244",
+      "process": "Service Requests",
+      "domain": "Network",
+      "tech": "DNS/DHCP",
+      "type": "FAQ",
+      "title": "Common Questions about DNS/DHCP",
+      "fields": {
+        "q": "What is the log retention for DNS/DHCP?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105245",
+      "process": "Service Requests",
+      "domain": "Network",
+      "tech": "DNS/DHCP",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in DNS/DHCP",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "DNS/DHCP Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105246",
+      "process": "Service Requests",
+      "domain": "Network",
+      "tech": "DNS/DHCP",
+      "type": "What Is",
+      "title": "DNS/DHCP Overview",
+      "fields": {
+        "intro": "DNS/DHCP is a critical component.",
+        "expl": "We utilize DNS/DHCP for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105247",
+      "process": "Service Requests",
+      "domain": "Network",
+      "tech": "DNS/DHCP",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for DNS/DHCP",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105248",
+      "process": "Service Requests",
+      "domain": "Network",
+      "tech": "Guest WiFi",
+      "type": "How To",
+      "title": "Configure Guest WiFi Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Guest WiFi.",
+        "instr": "1. Log in to Guest WiFi console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105249",
+      "process": "Service Requests",
+      "domain": "Network",
+      "tech": "Guest WiFi",
+      "type": "FAQ",
+      "title": "Common Questions about Guest WiFi",
+      "fields": {
+        "q": "What is the log retention for Guest WiFi?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105250",
+      "process": "Service Requests",
+      "domain": "Network",
+      "tech": "Guest WiFi",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Guest WiFi",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Guest WiFi Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105251",
+      "process": "Service Requests",
+      "domain": "Network",
+      "tech": "Guest WiFi",
+      "type": "What Is",
+      "title": "Guest WiFi Overview",
+      "fields": {
+        "intro": "Guest WiFi is a critical component.",
+        "expl": "We utilize Guest WiFi for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105252",
+      "process": "Service Requests",
+      "domain": "Network",
+      "tech": "Guest WiFi",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Guest WiFi",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105253",
+      "process": "Service Requests",
+      "domain": "Network",
+      "tech": "DHCP Reservations",
+      "type": "How To",
+      "title": "Configure DHCP Reservations Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for DHCP Reservations.",
+        "instr": "1. Log in to DHCP Reservations console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105254",
+      "process": "Service Requests",
+      "domain": "Network",
+      "tech": "DHCP Reservations",
+      "type": "FAQ",
+      "title": "Common Questions about DHCP Reservations",
+      "fields": {
+        "q": "What is the log retention for DHCP Reservations?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105255",
+      "process": "Service Requests",
+      "domain": "Network",
+      "tech": "DHCP Reservations",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in DHCP Reservations",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "DHCP Reservations Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105256",
+      "process": "Service Requests",
+      "domain": "Network",
+      "tech": "DHCP Reservations",
+      "type": "What Is",
+      "title": "DHCP Reservations Overview",
+      "fields": {
+        "intro": "DHCP Reservations is a critical component.",
+        "expl": "We utilize DHCP Reservations for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105257",
+      "process": "Service Requests",
+      "domain": "Network",
+      "tech": "DHCP Reservations",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for DHCP Reservations",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105258",
+      "process": "Service Requests",
+      "domain": "Network",
+      "tech": "Load Balancing",
+      "type": "How To",
+      "title": "Configure Load Balancing Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Load Balancing.",
+        "instr": "1. Log in to Load Balancing console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105259",
+      "process": "Service Requests",
+      "domain": "Network",
+      "tech": "Load Balancing",
+      "type": "FAQ",
+      "title": "Common Questions about Load Balancing",
+      "fields": {
+        "q": "What is the log retention for Load Balancing?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105260",
+      "process": "Service Requests",
+      "domain": "Network",
+      "tech": "Load Balancing",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Load Balancing",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Load Balancing Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105261",
+      "process": "Service Requests",
+      "domain": "Network",
+      "tech": "Load Balancing",
+      "type": "What Is",
+      "title": "Load Balancing Overview",
+      "fields": {
+        "intro": "Load Balancing is a critical component.",
+        "expl": "We utilize Load Balancing for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105262",
+      "process": "Service Requests",
+      "domain": "Network",
+      "tech": "Load Balancing",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Load Balancing",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105263",
+      "process": "Service Requests",
+      "domain": "Server",
+      "tech": "File Services",
+      "type": "How To",
+      "title": "Configure File Services Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for File Services.",
+        "instr": "1. Log in to File Services console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105264",
+      "process": "Service Requests",
+      "domain": "Server",
+      "tech": "File Services",
+      "type": "FAQ",
+      "title": "Common Questions about File Services",
+      "fields": {
+        "q": "What is the log retention for File Services?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105265",
+      "process": "Service Requests",
+      "domain": "Server",
+      "tech": "File Services",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in File Services",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "File Services Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105266",
+      "process": "Service Requests",
+      "domain": "Server",
+      "tech": "File Services",
+      "type": "What Is",
+      "title": "File Services Overview",
+      "fields": {
+        "intro": "File Services is a critical component.",
+        "expl": "We utilize File Services for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105267",
+      "process": "Service Requests",
+      "domain": "Server",
+      "tech": "File Services",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for File Services",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105268",
+      "process": "Service Requests",
+      "domain": "Server",
+      "tech": "Print Services",
+      "type": "How To",
+      "title": "Configure Print Services Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Print Services.",
+        "instr": "1. Log in to Print Services console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105269",
+      "process": "Service Requests",
+      "domain": "Server",
+      "tech": "Print Services",
+      "type": "FAQ",
+      "title": "Common Questions about Print Services",
+      "fields": {
+        "q": "What is the log retention for Print Services?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105270",
+      "process": "Service Requests",
+      "domain": "Server",
+      "tech": "Print Services",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Print Services",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Print Services Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105271",
+      "process": "Service Requests",
+      "domain": "Server",
+      "tech": "Print Services",
+      "type": "What Is",
+      "title": "Print Services Overview",
+      "fields": {
+        "intro": "Print Services is a critical component.",
+        "expl": "We utilize Print Services for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105272",
+      "process": "Service Requests",
+      "domain": "Server",
+      "tech": "Print Services",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Print Services",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105273",
+      "process": "Service Requests",
+      "domain": "Server",
+      "tech": "SharePoint",
+      "type": "How To",
+      "title": "Configure SharePoint Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for SharePoint.",
+        "instr": "1. Log in to SharePoint console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105274",
+      "process": "Service Requests",
+      "domain": "Server",
+      "tech": "SharePoint",
+      "type": "FAQ",
+      "title": "Common Questions about SharePoint",
+      "fields": {
+        "q": "What is the log retention for SharePoint?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105275",
+      "process": "Service Requests",
+      "domain": "Server",
+      "tech": "SharePoint",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in SharePoint",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "SharePoint Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105276",
+      "process": "Service Requests",
+      "domain": "Server",
+      "tech": "SharePoint",
+      "type": "What Is",
+      "title": "SharePoint Overview",
+      "fields": {
+        "intro": "SharePoint is a critical component.",
+        "expl": "We utilize SharePoint for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105277",
+      "process": "Service Requests",
+      "domain": "Server",
+      "tech": "SharePoint",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for SharePoint",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105278",
+      "process": "Service Requests",
+      "domain": "Server",
+      "tech": "Restores",
+      "type": "How To",
+      "title": "Configure Restores Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Restores.",
+        "instr": "1. Log in to Restores console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105279",
+      "process": "Service Requests",
+      "domain": "Server",
+      "tech": "Restores",
+      "type": "FAQ",
+      "title": "Common Questions about Restores",
+      "fields": {
+        "q": "What is the log retention for Restores?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105280",
+      "process": "Service Requests",
+      "domain": "Server",
+      "tech": "Restores",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Restores",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Restores Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105281",
+      "process": "Service Requests",
+      "domain": "Server",
+      "tech": "Restores",
+      "type": "What Is",
+      "title": "Restores Overview",
+      "fields": {
+        "intro": "Restores is a critical component.",
+        "expl": "We utilize Restores for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105282",
+      "process": "Service Requests",
+      "domain": "Server",
+      "tech": "Restores",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Restores",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105283",
+      "process": "Systems & Configuration",
+      "domain": "Network",
+      "tech": "HAProxy",
+      "type": "How To",
+      "title": "Configure HAProxy Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for HAProxy.",
+        "instr": "1. Log in to HAProxy console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105284",
+      "process": "Systems & Configuration",
+      "domain": "Network",
+      "tech": "HAProxy",
+      "type": "FAQ",
+      "title": "Common Questions about HAProxy",
+      "fields": {
+        "q": "What is the log retention for HAProxy?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105285",
+      "process": "Systems & Configuration",
+      "domain": "Network",
+      "tech": "HAProxy",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in HAProxy",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "HAProxy Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105286",
+      "process": "Systems & Configuration",
+      "domain": "Network",
+      "tech": "HAProxy",
+      "type": "What Is",
+      "title": "HAProxy Overview",
+      "fields": {
+        "intro": "HAProxy is a critical component.",
+        "expl": "We utilize HAProxy for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105287",
+      "process": "Systems & Configuration",
+      "domain": "Network",
+      "tech": "HAProxy",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for HAProxy",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105288",
+      "process": "Systems & Configuration",
+      "domain": "Network",
+      "tech": "Cisco Umbrella",
+      "type": "How To",
+      "title": "Configure Cisco Umbrella Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Cisco Umbrella.",
+        "instr": "1. Log in to Cisco Umbrella console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105289",
+      "process": "Systems & Configuration",
+      "domain": "Network",
+      "tech": "Cisco Umbrella",
+      "type": "FAQ",
+      "title": "Common Questions about Cisco Umbrella",
+      "fields": {
+        "q": "What is the log retention for Cisco Umbrella?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105290",
+      "process": "Systems & Configuration",
+      "domain": "Network",
+      "tech": "Cisco Umbrella",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Cisco Umbrella",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Cisco Umbrella Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105291",
+      "process": "Systems & Configuration",
+      "domain": "Network",
+      "tech": "Cisco Umbrella",
+      "type": "What Is",
+      "title": "Cisco Umbrella Overview",
+      "fields": {
+        "intro": "Cisco Umbrella is a critical component.",
+        "expl": "We utilize Cisco Umbrella for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105292",
+      "process": "Systems & Configuration",
+      "domain": "Network",
+      "tech": "Cisco Umbrella",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Cisco Umbrella",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105293",
+      "process": "Systems & Configuration",
+      "domain": "Network",
+      "tech": "Web Content Blocking",
+      "type": "How To",
+      "title": "Configure Web Content Blocking Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Web Content Blocking.",
+        "instr": "1. Log in to Web Content Blocking console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105294",
+      "process": "Systems & Configuration",
+      "domain": "Network",
+      "tech": "Web Content Blocking",
+      "type": "FAQ",
+      "title": "Common Questions about Web Content Blocking",
+      "fields": {
+        "q": "What is the log retention for Web Content Blocking?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105295",
+      "process": "Systems & Configuration",
+      "domain": "Network",
+      "tech": "Web Content Blocking",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Web Content Blocking",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Web Content Blocking Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105296",
+      "process": "Systems & Configuration",
+      "domain": "Network",
+      "tech": "Web Content Blocking",
+      "type": "What Is",
+      "title": "Web Content Blocking Overview",
+      "fields": {
+        "intro": "Web Content Blocking is a critical component.",
+        "expl": "We utilize Web Content Blocking for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105297",
+      "process": "Systems & Configuration",
+      "domain": "Network",
+      "tech": "Web Content Blocking",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Web Content Blocking",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105298",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "VMware",
+      "type": "How To",
+      "title": "Configure VMware Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for VMware.",
+        "instr": "1. Log in to VMware console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105299",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "VMware",
+      "type": "FAQ",
+      "title": "Common Questions about VMware",
+      "fields": {
+        "q": "What is the log retention for VMware?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105300",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "VMware",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in VMware",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "VMware Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105301",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "VMware",
+      "type": "What Is",
+      "title": "VMware Overview",
+      "fields": {
+        "intro": "VMware is a critical component.",
+        "expl": "We utilize VMware for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105302",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "VMware",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for VMware",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105303",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "ESXi",
+      "type": "How To",
+      "title": "Configure ESXi Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for ESXi.",
+        "instr": "1. Log in to ESXi console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105304",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "ESXi",
+      "type": "FAQ",
+      "title": "Common Questions about ESXi",
+      "fields": {
+        "q": "What is the log retention for ESXi?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105305",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "ESXi",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in ESXi",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "ESXi Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105306",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "ESXi",
+      "type": "What Is",
+      "title": "ESXi Overview",
+      "fields": {
+        "intro": "ESXi is a critical component.",
+        "expl": "We utilize ESXi for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105307",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "ESXi",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for ESXi",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105308",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "vCenter",
+      "type": "How To",
+      "title": "Configure vCenter Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for vCenter.",
+        "instr": "1. Log in to vCenter console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105309",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "vCenter",
+      "type": "FAQ",
+      "title": "Common Questions about vCenter",
+      "fields": {
+        "q": "What is the log retention for vCenter?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105310",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "vCenter",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in vCenter",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "vCenter Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105311",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "vCenter",
+      "type": "What Is",
+      "title": "vCenter Overview",
+      "fields": {
+        "intro": "vCenter is a critical component.",
+        "expl": "We utilize vCenter for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105312",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "vCenter",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for vCenter",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105313",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "Hyper-V",
+      "type": "How To",
+      "title": "Configure Hyper-V Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Hyper-V.",
+        "instr": "1. Log in to Hyper-V console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105314",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "Hyper-V",
+      "type": "FAQ",
+      "title": "Common Questions about Hyper-V",
+      "fields": {
+        "q": "What is the log retention for Hyper-V?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105315",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "Hyper-V",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Hyper-V",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Hyper-V Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105316",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "Hyper-V",
+      "type": "What Is",
+      "title": "Hyper-V Overview",
+      "fields": {
+        "intro": "Hyper-V is a critical component.",
+        "expl": "We utilize Hyper-V for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105317",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "Hyper-V",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Hyper-V",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105318",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "Docker",
+      "type": "How To",
+      "title": "Configure Docker Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Docker.",
+        "instr": "1. Log in to Docker console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105319",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "Docker",
+      "type": "FAQ",
+      "title": "Common Questions about Docker",
+      "fields": {
+        "q": "What is the log retention for Docker?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105320",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "Docker",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Docker",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Docker Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105321",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "Docker",
+      "type": "What Is",
+      "title": "Docker Overview",
+      "fields": {
+        "intro": "Docker is a critical component.",
+        "expl": "We utilize Docker for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105322",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "Docker",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Docker",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105323",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "Kubernetes",
+      "type": "How To",
+      "title": "Configure Kubernetes Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Kubernetes.",
+        "instr": "1. Log in to Kubernetes console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105324",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "Kubernetes",
+      "type": "FAQ",
+      "title": "Common Questions about Kubernetes",
+      "fields": {
+        "q": "What is the log retention for Kubernetes?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105325",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "Kubernetes",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Kubernetes",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Kubernetes Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105326",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "Kubernetes",
+      "type": "What Is",
+      "title": "Kubernetes Overview",
+      "fields": {
+        "intro": "Kubernetes is a critical component.",
+        "expl": "We utilize Kubernetes for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105327",
+      "process": "Systems & Configuration",
+      "domain": "Virtualization",
+      "tech": "Kubernetes",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Kubernetes",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105328",
+      "process": "Security & Compliance",
+      "domain": "Security",
+      "tech": "Vulnerability Scanning",
+      "type": "How To",
+      "title": "Configure Vulnerability Scanning Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Vulnerability Scanning.",
+        "instr": "1. Log in to Vulnerability Scanning console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105329",
+      "process": "Security & Compliance",
+      "domain": "Security",
+      "tech": "Vulnerability Scanning",
+      "type": "FAQ",
+      "title": "Common Questions about Vulnerability Scanning",
+      "fields": {
+        "q": "What is the log retention for Vulnerability Scanning?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105330",
+      "process": "Security & Compliance",
+      "domain": "Security",
+      "tech": "Vulnerability Scanning",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Vulnerability Scanning",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Vulnerability Scanning Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105331",
+      "process": "Security & Compliance",
+      "domain": "Security",
+      "tech": "Vulnerability Scanning",
+      "type": "What Is",
+      "title": "Vulnerability Scanning Overview",
+      "fields": {
+        "intro": "Vulnerability Scanning is a critical component.",
+        "expl": "We utilize Vulnerability Scanning for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105332",
+      "process": "Security & Compliance",
+      "domain": "Security",
+      "tech": "Vulnerability Scanning",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Vulnerability Scanning",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105333",
+      "process": "Security & Compliance",
+      "domain": "Security",
+      "tech": "Audit Logs",
+      "type": "How To",
+      "title": "Configure Audit Logs Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Audit Logs.",
+        "instr": "1. Log in to Audit Logs console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105334",
+      "process": "Security & Compliance",
+      "domain": "Security",
+      "tech": "Audit Logs",
+      "type": "FAQ",
+      "title": "Common Questions about Audit Logs",
+      "fields": {
+        "q": "What is the log retention for Audit Logs?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105335",
+      "process": "Security & Compliance",
+      "domain": "Security",
+      "tech": "Audit Logs",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Audit Logs",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Audit Logs Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105336",
+      "process": "Security & Compliance",
+      "domain": "Security",
+      "tech": "Audit Logs",
+      "type": "What Is",
+      "title": "Audit Logs Overview",
+      "fields": {
+        "intro": "Audit Logs is a critical component.",
+        "expl": "We utilize Audit Logs for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105337",
+      "process": "Security & Compliance",
+      "domain": "Security",
+      "tech": "Audit Logs",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Audit Logs",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105338",
+      "process": "Security & Compliance",
+      "domain": "Security",
+      "tech": "Patch Compliance",
+      "type": "How To",
+      "title": "Configure Patch Compliance Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Patch Compliance.",
+        "instr": "1. Log in to Patch Compliance console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105339",
+      "process": "Security & Compliance",
+      "domain": "Security",
+      "tech": "Patch Compliance",
+      "type": "FAQ",
+      "title": "Common Questions about Patch Compliance",
+      "fields": {
+        "q": "What is the log retention for Patch Compliance?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105340",
+      "process": "Security & Compliance",
+      "domain": "Security",
+      "tech": "Patch Compliance",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Patch Compliance",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Patch Compliance Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105341",
+      "process": "Security & Compliance",
+      "domain": "Security",
+      "tech": "Patch Compliance",
+      "type": "What Is",
+      "title": "Patch Compliance Overview",
+      "fields": {
+        "intro": "Patch Compliance is a critical component.",
+        "expl": "We utilize Patch Compliance for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105342",
+      "process": "Security & Compliance",
+      "domain": "Security",
+      "tech": "Patch Compliance",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Patch Compliance",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105343",
+      "process": "Security & Compliance",
+      "domain": "Security",
+      "tech": "GDPR",
+      "type": "How To",
+      "title": "Configure GDPR Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for GDPR.",
+        "instr": "1. Log in to GDPR console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105344",
+      "process": "Security & Compliance",
+      "domain": "Security",
+      "tech": "GDPR",
+      "type": "FAQ",
+      "title": "Common Questions about GDPR",
+      "fields": {
+        "q": "What is the log retention for GDPR?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105345",
+      "process": "Security & Compliance",
+      "domain": "Security",
+      "tech": "GDPR",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in GDPR",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "GDPR Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105346",
+      "process": "Security & Compliance",
+      "domain": "Security",
+      "tech": "GDPR",
+      "type": "What Is",
+      "title": "GDPR Overview",
+      "fields": {
+        "intro": "GDPR is a critical component.",
+        "expl": "We utilize GDPR for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105347",
+      "process": "Security & Compliance",
+      "domain": "Security",
+      "tech": "GDPR",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for GDPR",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105348",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Server",
+      "tech": "Windows Patching",
+      "type": "How To",
+      "title": "Configure Windows Patching Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Windows Patching.",
+        "instr": "1. Log in to Windows Patching console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105349",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Server",
+      "tech": "Windows Patching",
+      "type": "FAQ",
+      "title": "Common Questions about Windows Patching",
+      "fields": {
+        "q": "What is the log retention for Windows Patching?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105350",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Server",
+      "tech": "Windows Patching",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Windows Patching",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Windows Patching Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105351",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Server",
+      "tech": "Windows Patching",
+      "type": "What Is",
+      "title": "Windows Patching Overview",
+      "fields": {
+        "intro": "Windows Patching is a critical component.",
+        "expl": "We utilize Windows Patching for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105352",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Server",
+      "tech": "Windows Patching",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Windows Patching",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105353",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Server",
+      "tech": "Linux Patching",
+      "type": "How To",
+      "title": "Configure Linux Patching Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Linux Patching.",
+        "instr": "1. Log in to Linux Patching console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105354",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Server",
+      "tech": "Linux Patching",
+      "type": "FAQ",
+      "title": "Common Questions about Linux Patching",
+      "fields": {
+        "q": "What is the log retention for Linux Patching?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105355",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Server",
+      "tech": "Linux Patching",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Linux Patching",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Linux Patching Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105356",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Server",
+      "tech": "Linux Patching",
+      "type": "What Is",
+      "title": "Linux Patching Overview",
+      "fields": {
+        "intro": "Linux Patching is a critical component.",
+        "expl": "We utilize Linux Patching for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105357",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Server",
+      "tech": "Linux Patching",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Linux Patching",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105358",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Server",
+      "tech": "Commvault",
+      "type": "How To",
+      "title": "Configure Commvault Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Commvault.",
+        "instr": "1. Log in to Commvault console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105359",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Server",
+      "tech": "Commvault",
+      "type": "FAQ",
+      "title": "Common Questions about Commvault",
+      "fields": {
+        "q": "What is the log retention for Commvault?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105360",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Server",
+      "tech": "Commvault",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Commvault",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Commvault Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105361",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Server",
+      "tech": "Commvault",
+      "type": "What Is",
+      "title": "Commvault Overview",
+      "fields": {
+        "intro": "Commvault is a critical component.",
+        "expl": "We utilize Commvault for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105362",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Server",
+      "tech": "Commvault",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Commvault",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105363",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Server",
+      "tech": "Azure Backup",
+      "type": "How To",
+      "title": "Configure Azure Backup Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Azure Backup.",
+        "instr": "1. Log in to Azure Backup console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105364",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Server",
+      "tech": "Azure Backup",
+      "type": "FAQ",
+      "title": "Common Questions about Azure Backup",
+      "fields": {
+        "q": "What is the log retention for Azure Backup?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105365",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Server",
+      "tech": "Azure Backup",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Azure Backup",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Azure Backup Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105366",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Server",
+      "tech": "Azure Backup",
+      "type": "What Is",
+      "title": "Azure Backup Overview",
+      "fields": {
+        "intro": "Azure Backup is a critical component.",
+        "expl": "We utilize Azure Backup for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105367",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Server",
+      "tech": "Azure Backup",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Azure Backup",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105368",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Network",
+      "tech": "Firmware Upgrades",
+      "type": "How To",
+      "title": "Configure Firmware Upgrades Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Firmware Upgrades.",
+        "instr": "1. Log in to Firmware Upgrades console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105369",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Network",
+      "tech": "Firmware Upgrades",
+      "type": "FAQ",
+      "title": "Common Questions about Firmware Upgrades",
+      "fields": {
+        "q": "What is the log retention for Firmware Upgrades?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105370",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Network",
+      "tech": "Firmware Upgrades",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Firmware Upgrades",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Firmware Upgrades Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105371",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Network",
+      "tech": "Firmware Upgrades",
+      "type": "What Is",
+      "title": "Firmware Upgrades Overview",
+      "fields": {
+        "intro": "Firmware Upgrades is a critical component.",
+        "expl": "We utilize Firmware Upgrades for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105372",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Network",
+      "tech": "Firmware Upgrades",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Firmware Upgrades",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    },
+    {
+      "id": "KB4105373",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Network",
+      "tech": "Switch Replacement",
+      "type": "How To",
+      "title": "Configure Switch Replacement Basic Settings",
+      "fields": {
+        "intro": "Standard configuration steps for Switch Replacement.",
+        "instr": "1. Log in to Switch Replacement console.\n2. Navigate to System > Configuration.\n3. Apply template."
+      }
+    },
+    {
+      "id": "KB4105374",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Network",
+      "tech": "Switch Replacement",
+      "type": "FAQ",
+      "title": "Common Questions about Switch Replacement",
+      "fields": {
+        "q": "What is the log retention for Switch Replacement?",
+        "a": "Logs are retained for 7 days locally and 1 year in SIEM."
+      }
+    },
+    {
+      "id": "KB4105375",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Network",
+      "tech": "Switch Replacement",
+      "type": "KCS Article",
+      "title": "Error: Connection Timeout in Switch Replacement",
+      "fields": {
+        "issue": "Intermittent timeouts reported.",
+        "env": "Switch Replacement Production.",
+        "cause": "High latency on backend.",
+        "res": "Verify bandwidth and restart service."
+      }
+    },
+    {
+      "id": "KB4105376",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Network",
+      "tech": "Switch Replacement",
+      "type": "What Is",
+      "title": "Switch Replacement Overview",
+      "fields": {
+        "intro": "Switch Replacement is a critical component.",
+        "expl": "We utilize Switch Replacement for high availability and security."
+      }
+    },
+    {
+      "id": "KB4105377",
+      "process": "Maintenance, Releases & Outages",
+      "domain": "Network",
+      "tech": "Switch Replacement",
+      "type": "How To",
+      "title": "Advanced Troubleshooting for Switch Replacement",
+      "fields": {
+        "intro": "Advanced diagnosis steps.",
+        "instr": "1. Enable Verbose Logging.\n2. Collect logs.\n3. Analyze error codes."
+      }
+    }
+  ],
+  "taxonomy": [
+    {
+      "p": "Systems & Configuration",
+      "d": "Legacy Systems",
+      "t": [
+        "NetWare 6.5",
+        "Novell GroupWise",
+        "Novell ZENworks",
+        "Mercury Mail",
+        "Pegasus Mail"
+      ],
+      "id": "db25"
+    },
+    {
+      "p": "Systems & Configuration",
+      "d": "Server",
+      "t": [
+        "Windows Server 2003",
+        "Windows Server 2008 R2",
+        "Windows Server 2012 R2",
+        "Windows Server 2016",
+        "Windows Server 2019",
+        "Windows Server 2022",
+        "Windows Server 2025",
+        "SCCM",
+        "Linux Server",
+        "Group Policy",
+        "WSUS"
+      ],
+      "id": "8568"
+    },
+    {
+      "p": "Security & Compliance",
+      "d": "Network",
+      "t": [
+        "Firewall Auditing",
+        "DNS Security",
+        "NAC",
+        "Port Security"
+      ],
+      "id": "1845"
+    },
+    {
+      "p": "Incident Response & Troubleshooting",
+      "d": "Network",
+      "t": [
+        "Network Analysis",
+        "BGP",
+        "OSPF",
+        "Cisco Meraki",
+        "Palo Alto",
+        "Fortinet",
+        "Cisco ASA",
+        "Aruba",
+        "Wireless"
+      ],
+      "id": "c44e"
+    },
+    {
+      "p": "Access Requests",
+      "d": "Security",
+      "t": [
+        "Active Directory",
+        "MFA",
+        "Privileged Access",
+        "CyberArk"
+      ],
+      "id": "3c23"
+    },
+    {
+      "p": "Access Requests",
+      "d": "Network",
+      "t": [
+        "VPN",
+        "Cisco AnyConnect",
+        "Remote Access"
+      ],
+      "id": "afc0"
+    },
+    {
+      "p": "Change Requests",
+      "d": "Network",
+      "t": [
+        "Firewall Rules",
+        "F5 LTM",
+        "VLANs",
+        "Routing Changes"
+      ],
+      "id": "37aa"
+    },
+    {
+      "p": "Change Requests",
+      "d": "Server",
+      "t": [
+        "Capacity Management",
+        "Decommissioning"
+      ],
+      "id": "4fff"
+    },
+    {
+      "p": "Change Requests",
+      "d": "Virtualization",
+      "t": [
+        "VM Provisioning",
+        "AWS EC2",
+        "Azure VMs"
+      ],
+      "id": "9cd5"
+    },
+    {
+      "p": "Incident Response & Troubleshooting",
+      "d": "Server",
+      "t": [
+        "RHEL",
+        "Ubuntu",
+        "Apache",
+        "IIS"
+      ],
+      "id": "dfb3"
+    },
+    {
+      "p": "Incident Response & Troubleshooting",
+      "d": "Security",
+      "t": [
+        "Incident Response",
+        "Threat Detection",
+        "Graylog",
+        "Wazuh"
+      ],
+      "id": "d7f5"
+    },
+    {
+      "p": "Service Requests",
+      "d": "Network",
+      "t": [
+        "DNS/DHCP",
+        "Guest WiFi",
+        "DHCP Reservations",
+        "Load Balancing"
+      ],
+      "id": "9b84"
+    },
+    {
+      "p": "Service Requests",
+      "d": "Server",
+      "t": [
+        "File Services",
+        "Print Services",
+        "SharePoint",
+        "Restores"
+      ],
+      "id": "3c72"
+    },
+    {
+      "p": "Systems & Configuration",
+      "d": "Network",
+      "t": [
+        "HAProxy",
+        "Cisco Umbrella",
+        "Web Content Blocking"
+      ],
+      "id": "e360"
+    },
+    {
+      "p": "Systems & Configuration",
+      "d": "Virtualization",
+      "t": [
+        "VMware",
+        "ESXi",
+        "vCenter",
+        "Hyper-V",
+        "Docker",
+        "Kubernetes"
+      ],
+      "id": "a110"
+    },
+    {
+      "p": "Security & Compliance",
+      "d": "Security",
+      "t": [
+        "Vulnerability Scanning",
+        "Audit Logs",
+        "Patch Compliance",
+        "GDPR"
+      ],
+      "id": "30c3"
+    },
+    {
+      "p": "Maintenance, Releases & Outages",
+      "d": "Server",
+      "t": [
+        "Windows Patching",
+        "Linux Patching",
+        "Commvault",
+        "Azure Backup"
+      ],
+      "id": "4f68"
+    },
+    {
+      "p": "Maintenance, Releases & Outages",
+      "d": "Network",
+      "t": [
+        "Firmware Upgrades",
+        "Switch Replacement"
+      ],
+      "id": "a368"
+    }
+  ]
+}

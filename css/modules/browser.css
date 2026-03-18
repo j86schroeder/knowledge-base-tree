@@ -1,0 +1,71 @@
+ul { list-style: none; padding: 0; margin: 0; }
+li { 
+    padding: 10px 12px; font-size: 13px; cursor: pointer; margin-bottom: 2px; 
+    border-radius: 6px; color: var(--text-main); transition: all 0.1s ease; 
+    display: flex; align-items: center; justify-content: space-between; 
+}
+li:hover { background-color: #f1f5f9; color: #000; }
+li.selected { 
+    background-color: var(--primary-light); color: var(--primary); font-weight: 600; 
+    border-left: 3px solid var(--primary); 
+}
+
+.article-item { 
+    padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; cursor: pointer; 
+    margin-bottom: 10px; transition: all 0.2s; background: #fff; 
+    display: flex; flex-direction: column; gap: 6px; 
+}
+.article-item:hover { 
+    background-color: #f8fafc; border-color: #cbd5e1; 
+    transform: translateY(-1px); box-shadow: 0 4px 6px rgba(0,0,0,0.02); 
+}
+.article-item.selected { 
+    background-color: #fff; border-color: var(--primary); 
+    box-shadow: 0 0 0 1px var(--primary), 0 4px 6px rgba(79, 82, 189, 0.1); 
+}
+
+.art-title-row { font-size: 14px; font-weight: 600; line-height: 1.4; color: #1e293b; }
+.art-meta-row { display: flex; align-items: center; gap: 8px; margin-top: 4px;}
+
+.list-badge { 
+    font-size: 10px; font-weight: 700; text-transform: uppercase; padding: 2px 6px; 
+    border-radius: 4px; letter-spacing: 0.3px; flex-shrink: 0; 
+}
+.list-badge.howto { background: #dcfce7; color: #166534; }
+.list-badge.faq   { background: #ffedd5; color: #9a3412; }
+.list-badge.kcs   { background: #f3e8ff; color: #6b21a8; }
+.list-badge.what  { background: #e0f2fe; color: #075985; }
+
+.list-id { font-size: 11px; color: #94a3b8; font-family: monospace; }
+.tech-tag { 
+    font-size: 10px; color: #64748b; background: #f1f5f9; padding: 3px 8px; 
+    border-radius: 12px; font-weight: 600; margin-left: auto; border: 1px solid #e2e8f0; 
+}
+
+.count-badge { 
+    background: #f97316; 
+    color: #ffffff; 
+    padding: 2px 10px; 
+    border-radius: 12px; 
+    font-size: 18px; 
+    font-weight: 800; 
+    margin-left: 8px; 
+    min-width: 28px; 
+    text-align: center; 
+    box-shadow: 0 2px 4px rgba(249, 115, 22, 0.2); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Styling for empty list states */
+li.no-data {
+    color: #94a3b8;      /* A slightly darker gray so it's readable but looks 'empty' */
+    font-style: italic;
+    cursor: default;
+    padding: 10px 12px;
+}
+
+/* Prevent the gray 'None' from turning blue/purple when hovered */
+li.no-data:hover {
+    background: transparent;
+    color: #94a3b8;
+}

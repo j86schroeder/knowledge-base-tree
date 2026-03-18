@@ -1,0 +1,161 @@
+/* CLASSIC LIGHT SOURCE CODE MODAL */
+:root {
+    /* Code Palette (Classic View Source / Notepad++) */
+    --vs-bg: #ffffff;
+    --vs-gutter: #f0f0f0;      /* Line number background */
+    --vs-gutter-text: #2b91af; /* Line number text color */
+    --vs-border: #e2e8f0;      /* Separator line */
+    
+    --vs-text: #000000;        /* Main text */
+    --vs-tag: #800000;         /* Tags (e.g., div, p) - Dark Red/Maroon */
+    --vs-attr: #ff0000;        /* Attributes (e.g., style, class) - Red */
+    --vs-val: #0000ff;         /* Values (e.g., "center") - Blue */
+    --vs-comment: #008000;     /* Comments - Green */
+
+    /* Modal UI Palette */
+    --modal-ui-bg: #ffffff;
+    --modal-chrome-bg: #f8fafc;
+    --modal-ui-border: #cbd5e1;
+    --modal-ui-text: #334155;
+}
+
+/* MODAL OVERLAY */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Lighter dimming */
+    backdrop-filter: blur(2px);
+    display: flex; align-items: center; justify-content: center; z-index: 10000;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.modal-window {
+    background: var(--modal-ui-bg);
+    width: 90%; max-width: 1100px;
+    height: 85vh;
+    border-radius: 8px; /* Sharper corners like native windows */
+    display: flex; flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--modal-ui-border);
+    animation: modalPop 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalPop {
+    from { opacity: 0; transform: scale(0.98) translateY(5px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* HEADER */
+.modal-header { 
+    padding: 12px 20px; 
+    background: var(--modal-chrome-bg); 
+    border-bottom: 1px solid var(--modal-ui-border); 
+    display: flex; justify-content: space-between; align-items: center; 
+}
+
+.modal-title-group { display: flex; align-items: center; gap: 10px; }
+
+.modal-kb-badge { 
+    background: #475569; 
+    color: #fff; 
+    padding: 2px 8px; 
+    border-radius: 3px; 
+    font-family: 'Segoe UI', sans-serif; 
+    font-weight: 600; 
+    font-size: 12px;
+}
+
+.modal-kb-title { 
+    color: var(--modal-ui-text); 
+    font-size: 14px; 
+    font-weight: 600; 
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.modal-close-x { 
+    background: transparent; border: none; color: #64748b; 
+    cursor: pointer; padding: 4px; border-radius: 4px; transition: all 0.2s; 
+}
+.modal-close-x:hover { color: #ef4444; background: #fee2e2; }
+
+/* CODE BODY - THE WHITE EDITOR */
+.modal-body { 
+    flex: 1; 
+    background: var(--vs-bg); 
+    overflow-y: auto; 
+    display: flex; 
+    position: relative;
+}
+
+/* Scrollbar styling for light mode */
+.modal-body::-webkit-scrollbar { width: 14px; height: 14px; }
+.modal-body::-webkit-scrollbar-track { background: #f1f1f1; }
+.modal-body::-webkit-scrollbar-thumb { background: #c1c1c1; border: 3px solid #f1f1f1; border-radius: 8px; }
+.modal-body::-webkit-scrollbar-thumb:hover { background: #a8a8a8; }
+
+.code-container { 
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace; 
+    font-size: 13px; /* Matches 10pt/11pt look */
+    line-height: 1.5; 
+    width: 100%;
+}
+
+.code-line { 
+    display: flex; 
+    align-items: flex-start; 
+}
+/* Subtle highlight on hover */
+.code-line:hover { background: #f8f9fa; } 
+
+.line-number {
+    width: 50px; min-width: 50px;
+    text-align: right; 
+    padding-right: 15px; 
+    padding-top: 0px;
+    color: var(--vs-gutter-text); 
+    background: var(--vs-gutter);
+    border-right: 1px solid var(--vs-border); 
+    user-select: none; 
+    position: sticky; left: 0;
+    font-size: 12px;
+}
+
+.line-content {
+    color: var(--vs-text);
+    white-space: pre-wrap; 
+    word-break: break-all;
+    padding-left: 15px; 
+    padding-right: 15px; 
+    flex: 1;
+}
+
+/* SYNTAX COLORS */
+.code-tag { color: var(--vs-tag); font-weight: bold; }
+.code-attr { color: var(--vs-attr); }
+.code-val { color: var(--vs-val); }
+
+/* FOOTER */
+.modal-footer { 
+    padding: 12px 20px; 
+    background: var(--modal-chrome-bg); 
+    border-top: 1px solid var(--modal-ui-border); 
+    display: flex; justify-content: flex-end; 
+}
+
+.modal-btn.primary { 
+    height: 32px; padding: 0 20px; border-radius: 4px; 
+    border: 1px solid #475569; 
+    background: #fff; 
+    color: #475569; 
+    font-weight: 600; font-size: 13px;
+    cursor: pointer; transition: all 0.1s;
+}
+
+.modal-btn.primary:hover { background: #f1f5f9; border-color: #334155; color: #1e293b; }
+
+.modal-btn.primary.success { 
+    background: #dcfce7 !important; 
+    border-color: #16a34a !important; 
+    color: #15803d !important; 
+}
