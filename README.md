@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="screenshot.png" alt="Knowledge Base Tree Interface" width="100%">
+</p>
+
 # Knowledge Base Tree (KMS)
 
 Knowledge Base Tree is a modular, high-performance Knowledge Management System (KMS) designed to eliminate information silos in complex IT environments. Unlike flat documentation tools, this system uses a tri-pane hierarchical drill-down—**Process > Domain > Technology**—to provide engineers with immediate context alongside technical instructions.
